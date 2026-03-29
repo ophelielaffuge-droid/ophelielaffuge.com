@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ophélie Laffuge — Experte marketing vélo féminin</title>
+<meta name="description" content="Ophélie Laffuge, experte en marketing et communication vélo au féminin. Stratégie, contenu, plaidoyer pour marques, fédérations et organisations qui veulent toucher les femmes à vélo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sand: #F5F0E8;
+    --sand-deep: #EAE3D5;
+    --ink: #1A1814;
+    --ink-mid: #3D3B36;
+    --ink-light: #7A7770;
+    --sage: #2D4A35;
+    --sage-light: #4A7A58;
+    --sage-pale: #D8E8DC;
+    --terracotta: #C4502A;
+    --terracotta-pale: #F2DDD5;
+    --white: #FDFCFA;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--sand);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(245, 240, 232, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(26, 24, 20, 0.08);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    color: var(--ink-mid);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--terracotta); }
+
+  .nav-cta {
+    background: var(--ink) !important;
+    color: var(--sand) !important;
+    padding: 0.55rem 1.25rem !important;
+    border-radius: 2px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--terracotta) !important; color: var(--white) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+
+  .hero-left {
+    padding: 6rem 3rem 6rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--sand);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 4.5vw, 4rem);
+    line-height: 1.08;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  .hero-h1 em {
+    font-style: italic;
+    color: var(--sage);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--ink-mid);
+    max-width: 440px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--terracotta);
+    color: var(--white);
+    padding: 0.85rem 1.8rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: #A83E1E; transform: translateY(-1px); }
+
+  .btn-secondary {
+    color: var(--ink-mid);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+
+  .btn-secondary:hover { color: var(--sage); }
+
+  .hero-right {
+    background: var(--sage);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 3rem;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23ffffff' opacity='0.08'/%3E%3C/svg%3E") repeat;
+  }
+
+  .hero-stat-block {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-stat {
+    margin-bottom: 2rem;
+  }
+
+  .hero-stat-number {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    color: var(--white);
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  .hero-stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 0.25rem;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.9);
+    padding: 0.4rem 0.9rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+  }
+
+  /* SECTION COMMONS */
+  section { padding: 6rem 3rem; }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .section-h2 em {
+    font-style: italic;
+    color: var(--sage);
+  }
+
+  /* EXPERTISE */
+  .expertise {
+    background: var(--white);
+  }
+
+  .expertise-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .expertise-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-bottom: 4rem;
+    align-items: start;
+  }
+
+  .expertise-body {
+    font-size: 1rem;
+    color: var(--ink-mid);
+    line-height: 1.8;
+  }
+
+  .expertise-body p + p { margin-top: 1rem; }
+
+  .expertise-body strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--sand-deep);
+  }
+
+  .pillar {
+    background: var(--white);
+    padding: 2.2rem;
+  }
+
+  .pillar-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--sage-pale);
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .pillar-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .pillar-text {
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    line-height: 1.7;
+  }
+
+  /* TRACK RECORD */
+  .track {
+    background: var(--ink);
+    color: var(--white);
+  }
+
+  .track-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .track .section-label { color: rgba(255,255,255,0.4); }
+
+  .track .section-h2 { color: var(--white); }
+
+  .track .section-h2 em { color: var(--sage-pale); }
+
+  .projects {
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .project {
+    background: var(--ink);
+    padding: 2.5rem;
+    border-left: 3px solid transparent;
+    transition: border-color 0.25s;
+  }
+
+  .project:hover { border-left-color: var(--terracotta); }
+
+  .project-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .project-title {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .project-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .project-link:hover { color: var(--white); border-color: var(--white); }
+
+  /* PRISES DE PAROLE */
+  .speaking {
+    background: var(--terracotta-pale);
+  }
+
+  .speaking-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .speaking-list {
+    list-style: none;
+    margin-top: 2rem;
+  }
+
+  .speaking-list li {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(196, 80, 42, 0.18);
+    font-size: 0.92rem;
+    color: var(--ink-mid);
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+  }
+
+  .speaking-list li::before {
+    content: '→';
+    color: var(--terracotta);
+    flex-shrink: 0;
+    font-size: 0.85rem;
+  }
+
+  .speaking-quote {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .speaking-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 6rem;
+    color: var(--sage-pale);
+    position: absolute;
+    top: -1.5rem;
+    left: 2rem;
+    line-height: 1;
+  }
+
+  .speaking-quote p {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--ink);
+    font-style: italic;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+  }
+
+  .speaking-quote-attr {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    letter-spacing: 0.05em;
+  }
+
+  /* BMB BRIDGE */
+  .bmb-bridge {
+    background: var(--sage-pale);
+  }
+
+  .bmb-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .bmb-visual {
+    background: var(--sage);
+    padding: 3rem;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  .bmb-logo-text {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--white);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .bmb-sub-text {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .bmb-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .bmb-metric {
+    background: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 2px;
+  }
+
+  .bmb-metric-n {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  .bmb-metric-l {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.2rem;
+  }
+
+  .bmb-text .section-h2 em { color: var(--sage); }
+
+  .bmb-body {
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    margin-top: 1.5rem;
+  }
+
+  .bmb-body p + p { margin-top: 1rem; }
+
+  /* CONTACT */
+  .contact {
+    background: var(--sand);
+    text-align: center;
+  }
+
+  .contact-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact .section-h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-sub {
+    font-size: 1rem;
+    color: var(--ink-mid);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .contact-email {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .contact-email:hover { color: var(--sage); }
+
+  .contact-linkedin {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid currentColor;
+    transition: color 0.2s;
+  }
+
+  .contact-linkedin:hover { color: var(--ink); }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  .footer-bmb {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .footer-bmb a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: color 0.2s;
+  }
+
+  .footer-bmb a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ANIM */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-h1 { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-actions { animation: fadeUp 0.6s 0.3s ease both; }
+  .hero-stat-block { animation: fadeUp 0.8s 0.2s ease both; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 5rem 1.5rem 3rem; }
+    .hero-right { min-height: 320px; padding: 2rem 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+    .expertise-intro { grid-template-columns: 1fr; gap: 2rem; }
+    .pillars { grid-template-columns: 1fr; }
+    .projects { grid-template-columns: 1fr; }
+    .speaking-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .bmb-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Ophélie Laffuge</a>
+  <ul class="nav-links">
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#prises-de-parole">Prises de parole</a></li>
+    <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding: 0;">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Marketing &amp; communication — vélo féminin</p>
+    <h1 class="hero-h1">La référence<br>marketing du<br><em>vélo au féminin</em><br>en France.</h1>
+    <p class="hero-sub">
+      Marketing et communication spécialisés dans le vélo au féminin. Une expertise de terrain construite depuis 2021, au service des marques, des fédérations et des organisations du secteur.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Travailler ensemble</a>
+      <a href="#expertise" class="btn-secondary">Voir mon expertise</a>
+    </div>
+  </div>
+  <div class="hero-right" style="padding: 0; background: var(--ink);">
+    <img src="19092023-A7407640.jpg" alt="Ophélie Laffuge" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.75;">
+    <div class="hero-stat-block" style="padding: 3rem; background: linear-gradient(to top, rgba(26,24,20,0.92) 0%, rgba(26,24,20,0.4) 60%, transparent 100%); position: absolute; bottom: 0; left: 0; right: 0;">
+      <div class="hero-stat">
+        <div class="hero-stat-number" style="font-size: 1.5rem; line-height: 1.2;">Pionnière</div>
+        <div class="hero-stat-label">1ère plateforme dédiée au vélo au féminin en France — Beyond My Bike, 2021</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" style="font-size: 1.5rem; line-height: 1.2;">Depuis 2020</div>
+        <div class="hero-stat-label">Dizaines de projets, actions et collaborations dans toute la France</div>
+      </div>
+      <div class="hero-stat" style="margin-bottom: 0;">
+        <div class="hero-stat-number" style="font-size: 1.5rem; line-height: 1.2;">Réseau</div>
+        <div class="hero-stat-label">Acteurs institutionnels, marques, médias, communautés — un écosystème complet, activable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+  <div class="expertise-inner">
+    <div class="expertise-intro">
+      <div>
+        <p class="section-label">Ce que j'apporte</p>
+        <h2 class="section-h2">Marketing de niche.<br><em>Vraie connaissance terrain.</em></h2>
+      </div>
+      <div class="expertise-body">
+        <p>
+          Le marché du vélo féminin est encore largement sous-exploité en France. <strong>Les femmes représentent 30% des cyclistes urbains et moins de 20% du cyclisme sportif</strong> — un écart structurel qui crée des opportunités réelles pour les organisations qui disposent d'une compréhension fine de ces publics.
+        </p>
+        <p>
+          Depuis 2021, je travaille au contact de cette communauté : ses pratiques, ses attentes, ses codes. Ce terrain nourrit directement ma capacité à construire des stratégies pertinentes et des contenus adaptés.
+        </p>
+        <p>
+          J'interviens en <strong>collaboration directe</strong> avec les équipes, sur des missions sélectionnées pour leur cohérence avec mon champ d'expertise.
+        </p>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title">Stratégie de contenu &amp; personal branding</div>
+        <p class="pillar-text">Construction de la présence éditoriale sur les canaux pertinents. Positionnement, ligne éditoriale, stratégie de prises de parole pour les organisations et leurs représentants.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title">Marketing &amp; communication spécialisée</div>
+        <p class="pillar-text">Plans de communication, gestion de communautés, partenariats et activation de réseaux dans l'écosystème du vélo au féminin. Une connaissance directe des acteurs, des médias et des communautés du secteur.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title">Conseil &amp; accompagnement</div>
+        <p class="pillar-text">Accompagnement des organisations souhaitant structurer leur approche de la féminisation de la pratique. Diagnostic, recommandations stratégiques, mise en œuvre opérationnelle.</p>
+      </div>
+      <div class="pillar" style="border-top: 2px solid var(--terracotta); grid-column: 1 / -1;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+          <div>
+            <div class="pillar-num" style="font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); font-family: var(--sans); font-weight: 500; margin-bottom: 0.6rem;">International market entry · France</div>
+            <div class="pillar-title" style="font-size: 1.05rem; margin-bottom: 1rem;">Pour les organisations non francophones qui veulent s'implanter sur le marché français du vélo au féminin.</div>
+            <p class="pillar-text" style="font-size: 0.9rem;">
+              Avant le vélo, 9 ans de terrain international : événements B2B aux États-Unis, au Canada, en Europe pour les industries du jeu vidéo et du poker (Game Connection San Francisco, Global Poker League Los Angeles) ; Country Manager Europe pour Auvergne-Rhône-Alpes Tourisme, avec des partenariats sur les marchés européens et des campagnes multi-pays. Une pratique opérationnelle de l'anglais dans des contextes exigeants, pas seulement scolaire.
+            </p>
+          </div>
+          <div>
+            <p class="pillar-text" style="font-size: 0.9rem; margin-bottom: 1.2rem;">
+              Ce que j'apporte concrètement à une organisation étrangère : lecture du marché français (acteurs, réseaux, médias, communautés), adaptation de la stratégie au contexte local, interface opérationnelle avec les partenaires. La combinaison d'une expérience internationale réelle et d'une expertise spécifique sur le marché féminin du vélo en France est difficile à trouver ailleurs.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sage); border: 1px solid var(--sage-pale); padding: 0.3rem 0.75rem; border-radius: 2px;">Market entry France</span>
+              <span style="font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sage); border: 1px solid var(--sage-pale); padding: 0.3rem 0.75rem; border-radius: 2px;">FR / EN</span>
+              <span style="font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sage); border: 1px solid var(--sage-pale); padding: 0.3rem 0.75rem; border-radius: 2px;">Women's cycling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS / TRACK RECORD -->
+<section class="track" id="projets">
+  <div class="track-inner">
+    <p class="section-label">Track record</p>
+    <h2 class="section-h2">Des projets qui<br><em>ancrent l'expertise.</em></h2>
+
+    <div class="projects">
+      <div class="project">
+        <img src="logo-sportpowher-horiz-positif_1__2_.png" alt="SportpowHER" style="height: 36px; margin-bottom: 1.2rem; filter: brightness(0) invert(1); opacity: 0.9;">
+        <div class="project-tag">Start-up · actif</div>
+        <div class="project-title">SportpowHER</div>
+        <p class="project-desc">
+          Marketing et communication pour cette start-up dédiée à la place des femmes dans le sport. Plusieurs jours par semaine, participation au capital. Mission de fond sur la durée.
+        </p>
+      </div>
+      <div class="project" style="position: relative; overflow: hidden; padding: 0;">
+        <img src="ambassadrice_Visuel-officiel.jpg" alt="Vivre Vélo au Féminin FFC" style="width: 100%; height: 100%; object-fit: cover; min-height: 220px; display: block;">
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(26,24,20,0.92), transparent);">
+          <div class="project-tag" style="color: rgba(255,255,255,0.7);">Fédération · actif</div>
+          <div class="project-title">FFC — Réseau Ambassadrices Vivre Vélo</div>
+          <p class="project-desc" style="color: rgba(255,255,255,0.6); font-size: 0.82rem; margin-top: 0.4rem;">En charge du réseau d'ambassadrices de la Fédération Française de Cyclisme.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="CrazyPurple_square_TranspBackground__1_.png" alt="Les Femmes à Vélo" style="height: 44px; margin-bottom: 1.2rem; mix-blend-mode: screen; opacity: 0.9;">
+        <div class="project-tag">Association · co-fondatrice</div>
+        <div class="project-title">Les Femmes à Vélo</div>
+        <p class="project-desc">
+          Co-fondatrice et présidente de l'association. Construction d'une communauté, plaidoyer pour la féminisation du vélo en France. Mobilisation de partenaires et visibilité nationale.
+        </p>
+      </div>
+      <div class="project">
+        <img src="logo-rouge.png" alt="Beyond My Bike" style="height: 32px; margin-bottom: 1.2rem; mix-blend-mode: screen; opacity: 0.9;">
+        <div class="project-tag">Média · depuis 2021</div>
+        <div class="project-title">Beyond My Bike</div>
+        <p class="project-desc">
+          Média spécialisé vélo urbain au féminin, lancé et développé depuis 2021. Expertise SEO construite sur la durée, communauté engagée, e-shop (fermé depuis). Socle de toute la légitimité terrain.
+        </p>
+        <a href="https://www.beyondmybike.com" target="_blank" rel="noopener" class="project-link">beyondmybike.com →</a>
+      </div>
+      <div class="project">
+        <div class="project-tag">Expertise</div>
+        <div class="project-title">Mixité &amp; pratique féminine du vélo</div>
+        <p class="project-desc">
+          Intervenante régulière en tables rondes, événements sectoriels et médias sur les enjeux de représentation et de féminisation dans le cyclisme.
+        </p>
+      </div>
+      <div class="project">
+        <div class="project-tag">Positionnement</div>
+        <div class="project-title">Micro entreprise · depuis 2023</div>
+        <p class="project-desc">
+          Structure indépendante. Intervention en conseil, collaboration long terme ou mission ponctuelle. Plusieurs projets simultanés, avec une sélection rigoureuse des missions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRISES DE PAROLE -->
+<section class="speaking" id="prises-de-parole">
+  <div class="speaking-inner">
+    <div>
+      <p class="section-label">Prises de parole</p>
+      <h2 class="section-h2">Une voix identifiée<br>sur le sujet.</h2>
+      <ul class="speaking-list">
+        <li>Tables rondes sur la féminisation de la pratique cycliste</li>
+        <li>Événements sectoriels vélo et mobilité douce</li>
+        <li>Interventions médias sur la pratique féminine du vélo</li>
+        <li>Conférences mixité et inclusion dans le sport</li>
+        <li>Partage d'expertise auprès de fédérations et collectivités</li>
+        <li>Participation à des jurys et comités sport &amp; genre</li>
+      </ul>
+      <p style="margin-top: 2rem; font-size: 0.88rem; color: var(--ink-light); font-style: italic;">
+        J'interviens sur des événements sélectionnés, en priorité dans le cadre de missions rémunérées.
+      </p>
+    </div>
+    <div style="position: relative; border-radius: 2px; overflow: hidden; min-height: 380px;">
+      <img src="Portrait_Ophelie_micro.png" alt="Ophélie Laffuge en intervention" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; min-height: 380px;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(26,24,20,0.88) 0%, transparent 100%);">
+        <p style="font-family: var(--serif); font-size: 1.1rem; color: var(--white); font-style: italic; line-height: 1.5; margin-bottom: 0.75rem;">
+          Le vélo féminin n'est pas une tendance conjoncturelle. C'est un marché structurel en construction, qui demande une connaissance fine des publics et une présence dans la durée.
+        </p>
+        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.55); letter-spacing: 0.06em; text-transform: uppercase;">Ophélie Laffuge</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDGE BMB -->
+<section class="bmb-bridge" id="beyond-my-bike">
+  <div class="bmb-inner">
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <div style="background: var(--ink); padding: 2rem; border-radius: 2px; text-align: center;">
+        <img src="logo-rouge.png" alt="Beyond My Bike" style="height: 52px; mix-blend-mode: screen;">
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <img src="19092023-A7407724.jpg" alt="Ophélie Laffuge à vélo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 2px;">
+        <img src="19092023-A7407744.jpg" alt="Ophélie Laffuge casque" style="width: 100%; height: 200px; object-fit: cover; object-position: center top; border-radius: 2px;">
+      </div>
+    </div>
+    <div class="bmb-text">
+      <p class="section-label">D'un média à une expertise</p>
+      <h2 class="section-h2">Beyond My Bike —<br>là où tout<br><em>a commencé.</em></h2>
+      <div class="bmb-body">
+        <p>
+          En 2021, j'ai lancé Beyond My Bike pour traiter le vélo urbain au féminin à un moment où le sujet était peu couvert. Ce media a été un terrain d'expérimentation concret : production de contenu, construction de communauté, partenariats, e-commerce.
+        </p>
+        <p>
+          Trois ans plus tard, ce terrain m'a donné la légitimité pour travailler directement avec les acteurs qui font le marché — fédérations, start-ups, associations. BMB reste actif et constitue une ressource SEO précieuse sur le sujet.
+        </p>
+        <p>
+          <a href="https://www.beyondmybike.com" target="_blank" rel="noopener" style="color: var(--sage); font-weight: 500;">Découvrir Beyond My Bike →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNATIONAL SIGNAL -->
+<section style="background: var(--sand-deep); padding: 3rem;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 3rem; flex-wrap: wrap;">
+    <div>
+      <p style="font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 0.75rem;">Available in English</p>
+      <p style="font-family: var(--serif); font-size: 1.35rem; color: var(--ink); font-style: italic; font-weight: 400; line-height: 1.4; max-width: 560px;">
+        Supporting international organisations in understanding and entering the French women's cycling market.
+      </p>
+    </div>
+    <a href="#contact" style="flex-shrink: 0; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; transition: color 0.2s;" onmouseover="this.style.color='var(--terracotta)'" onmouseout="this.style.color='var(--ink-mid)'">Get in touch →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <p class="section-label">Contact</p>
+    <h2 class="section-h2">Un projet, une mission,<br>une <em>collaboration</em> ?</h2>
+    <p class="contact-sub">
+      Pour une collaboration, une mission de conseil ou une prise de parole, n'hésitez pas à me contacter directement.
+    </p>
+    <a href="/cdn-cgi/l/email-protection#82edf2eae7eeebe7c2edf2eae7eeebe7eee3e4e4f7e5e7ace1edef" class="contact-email"><span class="__cf_email__" data-cfemail="751a051d10191c10351a051d10191c10191413130012105b161a18">[email&#160;protected]</span></a>
+    <br>
+    <a href="https://www.linkedin.com/in/ophelielaffuge" target="_blank" rel="noopener" class="contact-linkedin">LinkedIn →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Ophélie Laffuge</div>
+  <ul class="footer-links">
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-bmb
